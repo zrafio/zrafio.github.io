@@ -1,0 +1,44 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
+    class="hover:scale-105 transition-transform">
+    <!-- Gradient Definitions -->
+    <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+        </linearGradient>
+        <!-- Glow Effect -->
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="1" result="coloredBlur" />
+            <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Monitor Base -->
+    <path d="M10 15h30v20H10z" fill="#1F2937" stroke="url(#logoGradient)" stroke-width="2" />
+
+    <!-- Monitor Stand -->
+    <path d="M20 35h10v5h-10z M17 40h16" stroke="url(#logoGradient)" stroke-width="2" />
+
+    <!-- Devil Horns -->
+    <path d="M15 15l-5-7 M35 15l5-7" stroke="url(#logoGradient)" stroke-width="2"
+        filter="url(#glow)" />
+
+    <!-- Code Brackets on Screen -->
+    <g>
+        <!-- Left Bracket -->
+        <path d="M18 22l-3 3l3 3" filter="url(#glow)" stroke="url(#logoGradient)" stroke-width="1" />
+        <!-- Center "AZ" Text -->
+        <text x="25" y="27" text-anchor="middle" stroke-width="1" fill="url(#logoGradient)"
+            font-size="7"
+            font-weight="bold" filter="url(#glow)">A Z</text>
+        <!-- Right Bracket -->
+        <path d="M32 22l3 3l-3 3" filter="url(#glow)" stroke="url(#logoGradient)" stroke-width="1" />
+    </g>
+
+    <!-- Evil Eyes Effect -->
+    <!-- <circle cx="20" cy="20" r="1" fill="url(#logoGradient)" filter="url(#glow)" /> -->
+    <!-- <circle cx="30" cy="20" r="1" fill="url(#logoGradient)" filter="url(#glow)" /> -->
+</svg>

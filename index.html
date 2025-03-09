@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scrollbar-custom">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Full Stack Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom CSS for animations -->
+    <meta name="description" content="AZ MEAN Dev - Professional portfolio of [Ahmed ZRAFI] - Full Stack Developer specializing in building modern web and cross-platform applications. Curious, rigorous and autonomous, I'm a computer science engineer by title, an innovative & optimized
+solutions seeker by occupation, and a lifelong learner by character.">
+
+    <link rel="icon" type="image/svg+xml" href="assets/imgs/logo.svg">
+    <title>AZ MEAN Dev - Full Stack Developer</title>
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
+        @layer utilities {
+            .scrollbar-custom {
+                scrollbar-width: thin;
+                scrollbar-color: #4F46E5 #1F2937;
             }
         }
 
@@ -34,122 +30,213 @@
             background-clip: text;
             color: transparent;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
-<body class="bg-gray-900 text-gray-100 font-sans">
+<body class="bg-gray-900 text-gray-100 font-sans scrollbar-custom">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-gray-800/90 backdrop-blur-sm z-50">
+    <nav class="fixed w-full bg-gray-800/90 backdrop-blur-sm z-50" role="navigation" aria-label="Main navigation">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <a href="#" class="text-2xl font-bold gradient-text">YourName</a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
-                    <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
-                    <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
-                    <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+                <a href="#" class="flex text-2xl font-bold" aria-label="Home">
+                    <img src="assets/imgs/logo.svg" alt="Logo">
+                    <span class="text-2xl font-bold gradient-text mx-4 my-auto" aria-label="Home">AZ MEAN Dev</a>
+                </a>
+
+                <div class="hidden md:flex space-x-8" role="menubar">
+                    <a href="#about" class="hover:text-indigo-400 transition-colors" role="menuitem">About</a>
+                    <a href="#projects" class="hover:text-indigo-400 transition-colors" role="menuitem">Projects</a>
+                    <a href="#skills" class="hover:text-indigo-400 transition-colors" role="menuitem">Skills</a>
+                    <a href="#contact" class="hover:text-indigo-400 transition-colors" role="menuitem">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-20">
-        <div class="container mx-auto px-6 fade-in">
-            <div class="max-w-2xl">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                    Building digital experiences with
-                    <span class="gradient-text">code & creativity</span>
-                </h1>
-                <p class="text-xl text-gray-400 mb-8">
-                    Full-stack developer specializing in modern web applications
-                    and user-centric solutions.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#contact"
-                        class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-lg font-medium transition-colors">
-                        Get in touch
-                    </a>
-                    <a href="#projects"
-                        class="border border-indigo-600 hover:bg-indigo-600/20 px-8 py-4 rounded-lg font-medium transition-colors">
-                        View work
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-800/50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-12">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Project Card 1 -->
-                <div class="bg-gray-800 rounded-xl p-8 hover:transform hover:scale-[1.02] transition-all">
-                    <div class="mb-4">
-                        <span class="text-indigo-400 text-sm">Full Stack</span>
-                        <h3 class="text-2xl font-bold mt-2">E-commerce Platform</h3>
-                    </div>
-                    <p class="text-gray-400 mb-6">
-                        Scalable e-commerce solution with React, Node.js, and microservices architecture.
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center pt-20" role="banner">
+            <div class="container flex items-center mx-auto px-6 fade-in">
+                <div class="max-w-2xl">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                        Building digital experiences with
+                        <span class="gradient-text">code & creativity</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-8">
+                        Full-stack developer specializing in modern web applications
+                        and user-centric solutions.
                     </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="bg-gray-900 px-3 py-1 rounded-full text-sm">React</span>
-                        <span class="bg-gray-900 px-3 py-1 rounded-full text-sm">Node.js</span>
-                        <span class="bg-gray-900 px-3 py-1 rounded-full text-sm">MongoDB</span>
-                    </div>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-indigo-400 hover:text-indigo-300">Live Demo</a>
-                        <a href="#" class="text-gray-400 hover:text-gray-300">Case Study →</a>
+                        <a href="#contact"
+                            class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-lg font-medium transition-colors"
+                            role="button">
+                            Get in touch
+                        </a>
+                        <a href="#projects"
+                            class="border border-indigo-600 hover:bg-indigo-600/20 px-8 py-4 rounded-lg font-medium transition-colors"
+                            role="button">
+                            View work
+                        </a>
                     </div>
                 </div>
-
-                <!-- Add more project cards following the same structure -->
+                <img src="assets/imgs/hero-img.png" alt="Digital world">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-12">Technical Arsenal</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center p-6 bg-gray-800 rounded-xl">
-                    <div class="text-4xl mb-4">🚀</div>
-                    <h3 class="text-xl font-bold mb-2">Frontend</h3>
-                    <p class="text-gray-400">React, Vue, TypeScript, Tailwind</p>
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-800/50" role="region" aria-labelledby="about-title">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 id="about-title" class="text-4xl font-bold mb-12">About Me</h2>
+
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <!-- Profile Image -->
+                        <div class="relative">
+                            <div class="aspect-square rounded-2xl overflow-hidden bg-gray-800">
+                                <!-- Replace with your image -->
+                                <img src="assets/imgs/me2.jpg" alt="Professional headshot"
+                                    class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <!-- Decorative elements -->
+                            <div class="absolute -z-10 top-4 left-4 w-full h-full bg-indigo-600/20 rounded-2xl"></div>
+                        </div>
+
+                        <!-- About Content -->
+                        <div class="space-y-6">
+                            <div class="space-y-4">
+                                <h3 class="text-2xl font-bold gradient-text">Passionate Developer & Problem Solver</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    With over [X] years of experience in full-stack development, I specialize in
+                                    building
+                                    scalable web applications that solve real-world problems. My journey in tech began
+                                    with
+                                    [your story here].
+                                </p>
+                            </div>
+
+                            <!-- Quick Facts -->
+                            <div class="grid grid-cols-2 gap-4 py-4">
+                                <div class="space-y-2">
+                                    <div class="text-indigo-400 text-sm">Experience</div>
+                                    <div class="font-bold text-xl">5+ Years</div>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="text-indigo-400 text-sm">Projects Completed</div>
+                                    <div class="font-bold text-xl">50+</div>
+                                </div>
+                            </div>
+
+                            <!-- Interests -->
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">Open Source</span>
+                                <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">AI/ML</span>
+                                <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">Web3</span>
+                                <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">UI/UX</span>
+                            </div>
+
+                            <!-- CTA -->
+                            <div class="pt-4">
+                                <a href="#contact"
+                                    class="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors">
+                                    Let's work together
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Add more skill cards -->
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-800/50">
-        <div class="container mx-auto px-6">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-4xl font-bold mb-8">Let's Connect</h2>
-                <p class="text-gray-400 mb-12">
-                    Have a project in mind or just want to chat tech?
-                    I'm always open to new opportunities and conversations.
-                </p>
-                <div class="flex justify-center space-x-6">
-                    <a href="mailto:you@email.com"
-                        class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-lg font-medium transition-colors">
-                        Send Email
-                    </a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                        class="border border-indigo-600 hover:bg-indigo-600/20 px-8 py-4 rounded-lg font-medium transition-colors">
-                        LinkedIn
-                    </a>
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-800/50" role="region" aria-labelledby="projects-title">
+            <div class="container mx-auto px-6">
+                <h2 id="projects-title" class="text-4xl font-bold mb-12">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project Card -->
+                    <article class="bg-gray-800 rounded-xl p-8 hover:transform hover:scale-[1.02] transition-all">
+                        <div class="mb-4">
+                            <span class="text-indigo-400 text-sm">Full Stack</span>
+                            <h3 class="text-2xl font-bold mt-2">E-commerce Platform</h3>
+                        </div>
+                        <p class="text-gray-400 mb-6">
+                            Scalable e-commerce solution with React, Node.js, and microservices architecture.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-900 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-gray-900 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-gray-900 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300" rel="noopener">Live Demo</a>
+                            <a href="#" class="text-gray-400 hover:text-gray-300" rel="noopener">Case Study →</a>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="border-t border-gray-800">
+        <!-- Skills Section -->
+        <section id="skills" class="py-20" role="region" aria-labelledby="skills-title">
+            <div class="container mx-auto px-6">
+                <h2 id="skills-title" class="text-4xl font-bold mb-12">Technical Arsenal</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center p-6 bg-gray-800 rounded-xl">
+                        <div class="text-4xl mb-4" role="img" aria-label="Frontend Development">🚀</div>
+                        <h3 class="text-xl font-bold mb-2">Frontend</h3>
+                        <p class="text-gray-400">React, Vue, TypeScript, Tailwind</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800/50" role="region" aria-labelledby="contact-title">
+            <div class="container mx-auto px-6">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 id="contact-title" class="text-4xl font-bold mb-8">Let's Connect</h2>
+                    <p class="text-gray-400 mb-12">
+                        Have a project in mind or just want to chat tech?
+                        I'm always open to new opportunities and conversations.
+                    </p>
+                    <div class="flex justify-center space-x-6">
+                        <a href="mailto:you@email.com"
+                            class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-lg font-medium transition-colors"
+                            rel="noopener">
+                            Send Email
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile"
+                            class="border border-indigo-600 hover:bg-indigo-600/20 px-8 py-4 rounded-lg font-medium transition-colors"
+                            target="_blank" rel="noopener noreferrer">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-800" role="contentinfo">
         <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-            © 2024 Your Name. Built with passion and Tailwind CSS.
+            AZ MEAN Dev © 2025. Built with passion and Tailwind CSS.
         </div>
     </footer>
 </body>
