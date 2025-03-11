@@ -31,6 +31,10 @@ solutions seeker by occupation, and a lifelong learner by character.">
             color: transparent;
         }
 
+        .gradient-fill {
+            fill: linear-gradient(45deg, #4F46E5, #EC4899);
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -58,7 +62,7 @@ solutions seeker by occupation, and a lifelong learner by character.">
                 <div class="hidden md:flex space-x-8" role="menubar">
                     <a href="#about" class="hover:text-indigo-400 transition-colors" role="menuitem">About</a>
                     <a href="#projects" class="hover:text-indigo-400 transition-colors" role="menuitem">Projects</a>
-                    <a href="#skills" class="hover:text-indigo-400 transition-colors" role="menuitem">Skills</a>
+                    <a href="#services" class="hover:text-indigo-400 transition-colors" role="menuitem">Services</a>
                     <a href="#contact" class="hover:text-indigo-400 transition-colors" role="menuitem">Contact</a>
                 </div>
             </div>
@@ -74,7 +78,7 @@ solutions seeker by occupation, and a lifelong learner by character.">
                         Building digital experiences with
                         <span class="gradient-text">code & creativity</span>
                     </h1>
-                    <p class="text-xl text-gray-400 mb-8">
+                    <p class="text-xl text-gray-300 mb-8">
                         Full-stack developer specializing in modern web applications
                         and user-centric solutions.
                     </p>
@@ -103,63 +107,221 @@ solutions seeker by occupation, and a lifelong learner by character.">
 
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <!-- Profile Image -->
-                        <div class="relative">
-                            <div class="aspect-square rounded-2xl overflow-hidden bg-gray-800">
-                                <!-- Replace with your image -->
-                                <img src="assets/imgs/me2.jpg" alt="Professional headshot"
-                                    class="w-full h-full object-cover" loading="lazy">
+                        <div class="relative flex flex-col">
+                            <div class="relative">
+                                <div class="aspect-square rounded-2xl overflow-hidden bg-gray-800">
+                                    <!-- Professional headshot -->
+                                    <img src="assets/imgs/me2.jpg" alt="Professional headshot"
+                                        class="w-full h-full object-cover" loading="lazy">
+                                </div>
+
+                                <!-- Decorative elements -->
+                                <div class="absolute -z-10 top-4 left-4 w-full h-full bg-indigo-600/20 rounded-2xl">
+                                </div>
+
                             </div>
-                            <!-- Decorative elements -->
-                            <div class="absolute -z-10 top-4 left-4 w-full h-full bg-indigo-600/20 rounded-2xl"></div>
+                            <!-- My name -->
+                            <h4 class="text-2xl font-bold gradient-text mt-12 mb-6 mx-auto">Ahmed ZRAFI</h4>
+
+                            <p class="text-gray-300 leading-relaxed">
+                                Curious, rigorous and autonomous, I'm a computer science engineer by title, an
+                                innovative & optimized
+                                solutions seeker by occupation, and a lifelong learner by character.
+                            </p>
+
                         </div>
 
                         <!-- About Content -->
                         <div class="space-y-6">
                             <div class="space-y-4">
-                                <h3 class="text-2xl font-bold gradient-text">Passionate Developer & Problem Solver</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    With over [X] years of experience in full-stack development, I specialize in
-                                    building
-                                    scalable web applications that solve real-world problems. My journey in tech began
-                                    with
-                                    [your story here].
+
+
+                                <h3 class="text-2xl font-bold gradient-text  my-8">Passionate Developer & Problem Solver
+                                </h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    I 'm a full Stack Developer specializing in building modern web and cross-platform
+                                    applications.
                                 </p>
                             </div>
 
                             <!-- Quick Facts -->
                             <div class="grid grid-cols-2 gap-4 py-4">
                                 <div class="space-y-2">
-                                    <div class="text-indigo-400 text-sm">Experience</div>
-                                    <div class="font-bold text-xl">5+ Years</div>
+                                    <div class="text-indigo-400 text-xl">Experience</div>
+                                    <div class="font-bold text-2xl">5+ Years</div>
                                 </div>
                                 <div class="space-y-2">
-                                    <div class="text-indigo-400 text-sm">Projects Completed</div>
-                                    <div class="font-bold text-xl">50+</div>
+                                    <div class="text-indigo-400 text-xl">Projects Completed</div>
+                                    <div class="font-bold text-2xl">10+</div>
                                 </div>
                             </div>
 
                             <!-- Interests -->
-                            <div class="flex flex-wrap gap-3">
-                                <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">Open Source</span>
-                                <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">AI/ML</span>
-                                <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">Web3</span>
-                                <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">UI/UX</span>
+                            <div class="flex">
+                                <div class="text-indigo-400 text-xl">Technical Arsenal</div>
                             </div>
+                            <!-- <div class="flex flex-wrap gap-4"> -->
+                            <div class="flex flex-wrap gap-4">
+                                <!-- <span class=" bg-gray-800 px-4 py-2 rounded-lg text-sm"> -->
+                                <!-- <h4 class="flex mt-2 mb-4"> -->
 
-                            <!-- CTA -->
-                            <div class="pt-4">
-                                <a href="#contact"
-                                    class="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors">
-                                    Let's work together
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
+                                <!-- forntend icon -->
+                                <!-- <svg class="fill-gray-300" width="24" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M21,16V4H3V16H21M21,2A2,2 0 0,1 23,4V16A2,2 0 0,1 21,18H14V20H16V22H8V20H10V18H3C1.89,18 1,17.1 1,16V4C1,2.89 1.89,2 3,2H21M5,6H14V11H5V6M15,6H19V8H15V6M19,9V14H15V9H19M5,12H9V14H5V12M10,12H14V14H10V12Z" />
+                                        </svg>
+
+                                        <span class="text-xl mx-4">Fontend</span>
+                                    </h4> -->
+
+                                <div class="flex flex-wrap">
+                                    <!-- ionic -->
+                                    <a href="https://ionicframework.com/"
+                                        class="fill-gray-300  hover:fill-[#3880FF]  hover:scale-105 p-2 my-auto ml-2"
+                                        target="_blank">
+                                        <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            role="img">
+                                            <title>Ionic</title>
+                                            <path
+                                                d="M22.922 7.027l-.103-.23-.169.188c-.408.464-.928.82-1.505 1.036l-.159.061.066.155a9.745 9.745 0 0 1 .75 3.759c0 5.405-4.397 9.806-9.806 9.806-5.409 0-9.802-4.397-9.802-9.802 0-5.405 4.402-9.806 9.806-9.806 1.467 0 2.883.319 4.2.947l.155.075.066-.155a3.767 3.767 0 0 1 1.106-1.453l.197-.159-.225-.117A11.905 11.905 0 0 0 12.001.001c-6.619 0-12 5.381-12 12s5.381 12 12 12 12-5.381 12-12c0-1.73-.361-3.403-1.078-4.973zM12 6.53A5.476 5.476 0 0 0 6.53 12 5.476 5.476 0 0 0 12 17.47 5.476 5.476 0 0 0 17.47 12 5.479 5.479 0 0 0 12 6.53zm10.345-2.007a2.494 2.494 0 1 1-4.988 0 2.494 2.494 0 0 1 4.988 0z" />
+
+                                        </svg>
+                                    </a>
+
+                                    <!-- Angular -->
+                                    <a href="https://angular.dev/"
+                                        class="fill-gray-300 hover:fill-[#EC4899] hover:scale-105 p-2 my-auto ml-2"
+                                        target="_blank">
+                                        <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            role="img">
+                                            <title>Angular</title>
+                                            <path
+                                                d="M16.712 17.711H7.288l-1.204 2.916L12 24l5.916-3.373-1.204-2.916ZM14.692 0l7.832 16.855.814-12.856L14.692 0ZM9.308 0 .662 3.999l.814 12.856L9.308 0Zm-.405 13.93h6.198L12 6.396 8.903 13.93Z" />
+
+
+                                        </svg>
+                                    </a>
+
+                                    <!-- Angular Material-->
+                                    <a href="https://material.angular.io/"
+                                        class="fill-gray-300 hover:fill-blue-300 hover:scale-105 p-2 my-auto ml-2"
+                                        target="_blank">
+                                        <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            role="img">
+                                            <title>Angular Material</title>
+                                            <path
+                                                d="M16.712 17.711H7.288l-1.204 2.916L12 24l5.916-3.373-1.204-2.916ZM14.692 0l7.832 16.855.814-12.856L14.692 0ZM9.308 0 .662 3.999l.814 12.856L9.308 0Zm-.405 13.93h6.198L12 6.396 8.903 13.93Z" />
+                                        </svg>
+                                    </a>
+
+                                    <!-- Bootstrap -->
+                                    <a href="https://getbootstrap.com/"
+                                        class="fill-gray-300 hover:fill-[#7952B3] hover:scale-105 p-2 my-auto ml-2"
+                                        target="_blank">
+                                        <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            role="img">
+                                            <title>Bootstrap</title>
+                                            <path
+                                                d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z" />
+                                        </svg>
+                                    </a>
+
+                                    <!-- Tailwindcss -->
+                                    <a href="https://getbootstrap.com/"
+                                        class="fill-gray-300 hover:fill-[#7952B3] hover:scale-105 p-2 my-auto ml-2"
+                                        target="_blank">
+                                        <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            role="img">
+                                            <title>Bootstrap</title>
+                                            <path
+                                                d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z" />
+                                        </svg>
+                                    </a>
+
+
+
+
+                                    <!-- </div>
+                                </span> -->
+                                </div>
+
+                                <!-- CTA -->
+                                <div class="pt-4">
+                                    <p class="text-gray-300 mb-4">
+                                        Have a project in mind or just want to chat tech?
+                                        I'm always open to new opportunities and conversations.
+                                    </p>
+                                    <div class="flex">
+                                        <span
+                                            class="flex text-xl items-center text-indigo-400 hover:text-indigo-300 transition-colors">
+                                            Let's connect !
+
+                                            <!-- right arrow -->
+                                            <svg class="m-4" width="24" xmlns="http://www.w3.org/2000/svg"
+                                                class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                        <span class="flex my-auto">
+                                            <!-- mail -->
+                                            <a href="mailto:ahmedzrafi01@gmail.com"
+                                                class="fill-gray-300  hover:fill-red-400  hover:scale-105 p-2 my-auto ml-2"
+                                                target="_blank">
+                                                <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                                    role="img">
+                                                    <title>Gmail</title>
+                                                    <path
+                                                        d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+                                                </svg>
+                                            </a>
+                                            <!-- likedin -->
+                                            <a href="https://www.linkedin.com/in/ahmed-zrafi"
+                                                class="fill-gray-300  hover:fill-blue-500  hover:scale-105 p-2 my-auto ml-2"
+                                                target="_blank">
+                                                <svg width="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <title>linkedin</title>
+                                                    <path
+                                                        d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                                                </svg>
+                                            </a>
+
+                                            <!-- Calendly -->
+                                            <a href="https://calendly.com/zrafiovic/30min-meeting"
+                                                class="fill-gray-300  hover:fill-blue-700  hover:scale-105 p-2 my-auto ml-2"
+                                                target="_blank">
+                                                <svg width="24" role="img" viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <title>Calendly</title>
+                                                    <path
+                                                        d="M19.655 14.262c.281 0 .557.023.828.064 0 .005-.005.01-.005.014-.105.267-.234.534-.381.786l-1.219 2.106c-1.112 1.936-3.177 3.127-5.411 3.127h-2.432c-2.23 0-4.294-1.191-5.412-3.127l-1.218-2.106a6.251 6.251 0 0 1 0-6.252l1.218-2.106C6.736 4.832 8.8 3.641 11.035 3.641h2.432c2.23 0 4.294 1.191 5.411 3.127l1.219 2.106c.147.252.271.519.381.786 0 .004.005.009.005.014-.267.041-.543.064-.828.064-1.816 0-2.501-.607-3.291-1.306-.764-.676-1.711-1.517-3.44-1.517h-1.029c-1.251 0-2.387.455-3.2 1.278-.796.805-1.233 1.904-1.233 3.099v1.411c0 1.196.437 2.295 1.233 3.099.813.823 1.949 1.278 3.2 1.278h1.034c1.729 0 2.676-.841 3.439-1.517.791-.703 1.471-1.306 3.287-1.301Zm.005-3.237c.399 0 .794-.036 1.179-.11-.002-.004-.002-.01-.002-.014-.073-.414-.193-.823-.349-1.218.731-.12 1.407-.396 1.986-.819 0-.004-.005-.013-.005-.018-.331-1.085-.832-2.101-1.489-3.03-.649-.915-1.435-1.719-2.331-2.395-1.867-1.398-4.088-2.138-6.428-2.138-1.448 0-2.855.28-4.175.841-1.273.543-2.423 1.315-3.407 2.299S2.878 6.552 2.341 7.83c-.557 1.324-.842 2.726-.842 4.175 0 1.448.281 2.855.842 4.174.542 1.274 1.314 2.423 2.298 3.407s2.129 1.761 3.407 2.299c1.324.556 2.727.841 4.175.841 2.34 0 4.561-.74 6.428-2.137a10.815 10.815 0 0 0 2.331-2.396c.652-.929 1.158-1.949 1.489-3.03 0-.004.005-.014.005-.018-.579-.423-1.255-.699-1.986-.819.161-.395.276-.804.349-1.218.005-.009.005-.014.005-.023.869.166 1.692.506 2.404 1.035.685.505.552 1.075.446 1.416C22.184 20.437 17.619 24 12.221 24c-6.625 0-12-5.375-12-12s5.37-12 12-12c5.398 0 9.963 3.563 11.471 8.464.106.341.239.915-.446 1.421-.717.529-1.535.873-2.404 1.034.128.716.128 1.45 0 2.166-.387-.074-.782-.11-1.182-.11-4.184 0-3.968 2.823-6.736 2.823h-1.029c-1.899 0-3.15-1.357-3.15-3.095v-1.411c0-1.738 1.251-3.094 3.15-3.094h1.034c2.768 0 2.552 2.823 6.731 2.827Z" />
+                                                </svg>
+                                            </a>
+
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20" role="region" aria-labelledby="services-title">
+            <div class="container mx-auto px-6">
+                <h2 id="services-title" class="text-4xl font-bold mb-12">Services</h2>
+                <p class="text-gray-300 mb-12">
+                    Full Stack Developer specializing in building modern web and cross-platform applications.
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center p-6 bg-gray-800 rounded-xl">
+                        <div class="text-4xl mb-4" role="img" aria-label="Frontend Development">🚀</div>
+                        <h3 class="text-xl font-bold mb-2">Frontend</h3>
+                        <p class="text-gray-300">React, Vue, TypeScript, Tailwind</p>
                     </div>
                 </div>
             </div>
@@ -176,7 +338,7 @@ solutions seeker by occupation, and a lifelong learner by character.">
                             <span class="text-indigo-400 text-sm">Full Stack</span>
                             <h3 class="text-2xl font-bold mt-2">E-commerce Platform</h3>
                         </div>
-                        <p class="text-gray-400 mb-6">
+                        <p class="text-gray-300 mb-6">
                             Scalable e-commerce solution with React, Node.js, and microservices architecture.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
@@ -186,56 +348,17 @@ solutions seeker by occupation, and a lifelong learner by character.">
                         </div>
                         <div class="flex space-x-4">
                             <a href="#" class="text-indigo-400 hover:text-indigo-300" rel="noopener">Live Demo</a>
-                            <a href="#" class="text-gray-400 hover:text-gray-300" rel="noopener">Case Study →</a>
+                            <a href="#" class="text-gray-300 hover:text-gray-300" rel="noopener">Case Study →</a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-20" role="region" aria-labelledby="skills-title">
-            <div class="container mx-auto px-6">
-                <h2 id="skills-title" class="text-4xl font-bold mb-12">Technical Arsenal</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div class="text-center p-6 bg-gray-800 rounded-xl">
-                        <div class="text-4xl mb-4" role="img" aria-label="Frontend Development">🚀</div>
-                        <h3 class="text-xl font-bold mb-2">Frontend</h3>
-                        <p class="text-gray-400">React, Vue, TypeScript, Tailwind</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gray-800/50" role="region" aria-labelledby="contact-title">
-            <div class="container mx-auto px-6">
-                <div class="max-w-2xl mx-auto text-center">
-                    <h2 id="contact-title" class="text-4xl font-bold mb-8">Let's Connect</h2>
-                    <p class="text-gray-400 mb-12">
-                        Have a project in mind or just want to chat tech?
-                        I'm always open to new opportunities and conversations.
-                    </p>
-                    <div class="flex justify-center space-x-6">
-                        <a href="mailto:you@email.com"
-                            class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-lg font-medium transition-colors"
-                            rel="noopener">
-                            Send Email
-                        </a>
-                        <a href="https://linkedin.com/in/yourprofile"
-                            class="border border-indigo-600 hover:bg-indigo-600/20 px-8 py-4 rounded-lg font-medium transition-colors"
-                            target="_blank" rel="noopener noreferrer">
-                            LinkedIn
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="border-t border-gray-800" role="contentinfo">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-300">
             AZ MEAN Dev © 2025. Built with passion and Tailwind CSS.
         </div>
     </footer>
