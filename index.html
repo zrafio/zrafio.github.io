@@ -13,6 +13,11 @@ solutions seeker by occupation, and a lifelong learner by character.">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+
         @layer utilities {
             .scrollbar-custom {
                 scrollbar-width: thin;
@@ -46,10 +51,41 @@ solutions seeker by occupation, and a lifelong learner by character.">
                 transform: translateY(0);
             }
         }
+
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
     </style>
 </head>
 
 <body class="bg-gray-900 text-gray-100 font-sans scrollbar-custom">
+
     <!-- Navigation -->
     <nav class="fixed w-full bg-gray-800/90 backdrop-blur-sm z-50" role="navigation" aria-label="Main navigation">
         <div class="container mx-auto px-6 py-4">
@@ -60,9 +96,9 @@ solutions seeker by occupation, and a lifelong learner by character.">
                 </a>
 
                 <div class="hidden md:flex space-x-8" role="menubar">
+                    <a href="#services" class="hover:text-indigo-400 transition-colors" role="menuitem">Services</a>
                     <a href="#about" class="hover:text-indigo-400 transition-colors" role="menuitem">About</a>
                     <a href="#projects" class="hover:text-indigo-400 transition-colors" role="menuitem">Projects</a>
-                    <a href="#services" class="hover:text-indigo-400 transition-colors" role="menuitem">Services</a>
                     <a href="#contact" class="hover:text-indigo-400 transition-colors" role="menuitem">Contact</a>
                 </div>
             </div>
@@ -99,15 +135,106 @@ solutions seeker by occupation, and a lifelong learner by character.">
             </div>
         </section>
 
+        <!-- Technical Arsenal Section -->
+        <section id="skills" class="py-20 bg-gray-800/50" role="region" aria-labelledby="skills-title">
+            <div class="container mx-auto px-6">
+                <h2 id="skills-title" class="text-center text-4xl font-bold mb-12">Technical Arsenal</h2>
+                <p class="text-center text-gray-300 mb-12">
+                    Full Stack Developer specializing in building modern web and cross-platform applications.
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Frontend Development -->
+                    <div class="text-center p-6 bg-gray-800 rounded-xl">
+                        <div class="text-4xl mb-4" role="img" aria-label="Frontend Development">🎨</div>
+                        <h3 class="text-xl font-bold mb-2">Frontend</h3>
+                        <p class="text-gray-300">Angular, TypeScript, Material, Bootstrap</p>
+                    </div>
+
+                    <!-- Backend Development -->
+                    <div class="text-center p-6 bg-gray-800 rounded-xl">
+                        <div class="text-4xl mb-4" role="img" aria-label="Backend Development">⚙️</div>
+                        <h3 class="text-xl font-bold mb-2">Backend</h3>
+                        <p class="text-gray-300">Node.js, Express, MongoDB, REST APIs</p>
+                    </div>
+
+                    <!-- Mobile Development -->
+                    <div class="text-center p-6 bg-gray-800 rounded-xl">
+                        <div class="text-4xl mb-4" role="img" aria-label="Mobile Development">📱</div>
+                        <h3 class="text-xl font-bold mb-2">Mobile</h3>
+                        <p class="text-gray-300">Ionic Framework, Capacitor, Cross-platform</p>
+                    </div>
+
+                    <!-- DevOps & Cloud -->
+                    <div class="text-center p-6 bg-gray-800 rounded-xl">
+                        <div class="text-4xl mb-4" role="img" aria-label="DevOps">🚀</div>
+                        <h3 class="text-xl font-bold mb-2">DevOps</h3>
+                        <p class="text-gray-300">Git, Azure DevOps, CI/CD, Cloud</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-800/50" role="region" aria-labelledby="services-title">
+            <div class="container mx-auto px-6">
+                <h2 id="services-title" class="text-center text-4xl font-bold mb-12">Services</h2>
+                <p class="text-center text-gray-300 mb-12">
+                    Transforming your digital ideas into powerful, user-friendly solutions
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Design to Web -->
+                    <div class="text-center p-6 bg-gray-800 rounded-xl hover:bg-gray-700 transition-colors">
+                        <div class="text-4xl mb-4" role="img" aria-label="Design Implementation">✨</div>
+                        <h3 class="text-xl font-bold mb-2">Design to Web</h3>
+                        <p class="text-gray-300">Transform your design mockups into pixel-perfect, responsive websites
+                            that work
+                            flawlessly across all devices</p>
+                    </div>
+
+                    <!-- Custom Web Applications -->
+                    <div class="text-center p-6 bg-gray-800 rounded-xl hover:bg-gray-700 transition-colors">
+                        <div class="text-4xl mb-4" role="img" aria-label="Web Applications">⚡</div>
+                        <h3 class="text-xl font-bold mb-2">Custom Solutions</h3>
+                        <p class="text-gray-300">Build tailored web applications that automate your business processes
+                            and
+                            enhance productivity</p>
+                    </div>
+
+                    <!-- Mobile Apps -->
+                    <div class="text-center p-6 bg-gray-800 rounded-xl hover:bg-gray-700 transition-colors">
+                        <div class="text-4xl mb-4" role="img" aria-label="Mobile Development">📱</div>
+                        <h3 class="text-xl font-bold mb-2">Mobile Apps</h3>
+                        <p class="text-gray-300">Create cross-platform mobile applications that provide seamless
+                            experience on
+                            both iOS and Android</p>
+                    </div>
+
+                    <!-- Technical Consultation -->
+                    <div class="text-center p-6 bg-gray-800 rounded-xl hover:bg-gray-700 transition-colors">
+                        <div class="text-4xl mb-4" role="img" aria-label="Consultation">💡</div>
+                        <h3 class="text-xl font-bold mb-2">Tech Consulting</h3>
+                        <p class="text-gray-300">Get expert advice on technology stack, architecture, and best practices
+                            for
+                            your digital projects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- About Section -->
-        <section id="about" class="py-20 bg-gray-800/50" role="region" aria-labelledby="about-title">
+        <section id="about" class="py-20" role="region" aria-labelledby="about-title">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto">
-                    <h2 id="about-title" class="text-4xl font-bold mb-12">About Me</h2>
+                    <h2 id="about-title" class="text-center text-4xl font-bold mb-12">About Me</h2>
 
                     <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <!-- Profile Image -->
-                        <div class="relative flex flex-col">
+
+                        <!-- Profile Image col-->
+                        <div class="relative flex flex-col pt-8">
                             <div class="relative">
                                 <div class="aspect-square rounded-2xl overflow-hidden bg-gray-800">
                                     <!-- Professional headshot -->
@@ -123,11 +250,6 @@ solutions seeker by occupation, and a lifelong learner by character.">
                             <!-- My name -->
                             <h4 class="text-2xl font-bold gradient-text mt-12 mb-6 mx-auto">Ahmed ZRAFI</h4>
 
-                            <p class="text-gray-300 leading-relaxed">
-                                Curious, rigorous and autonomous, I'm a computer science engineer by title, an
-                                innovative & optimized
-                                solutions seeker by occupation, and a lifelong learner by character.
-                            </p>
 
                         </div>
 
@@ -138,10 +260,13 @@ solutions seeker by occupation, and a lifelong learner by character.">
 
                                 <h3 class="text-2xl font-bold gradient-text  my-8">Passionate Developer & Problem Solver
                                 </h3>
+
                                 <p class="text-gray-300 leading-relaxed">
-                                    I 'm a full Stack Developer specializing in building modern web and cross-platform
-                                    applications.
+                                    Curious, rigorous and autonomous, I'm a computer science engineer by title, an
+                                    innovative & optimized
+                                    solutions seeker by occupation, and a lifelong learner by character.
                                 </p>
+
                             </div>
 
                             <!-- Quick Facts -->
@@ -156,181 +281,31 @@ solutions seeker by occupation, and a lifelong learner by character.">
                                 </div>
                             </div>
 
-                            <!-- Interests -->
-                            <div class="flex">
-                                <div class="text-indigo-400 text-xl">Technical Arsenal</div>
-                            </div>
-                            <!-- <div class="flex flex-wrap gap-4"> -->
-                            <div class="flex flex-wrap gap-4">
-                                <!-- <span class=" bg-gray-800 px-4 py-2 rounded-lg text-sm"> -->
-                                <!-- <h4 class="flex mt-2 mb-4"> -->
+                            <p class="text-gray-300 leading-relaxed my-8">
+                                I 'm a full Stack Developer specializing in building modern web and cross-platform
+                                applications.
+                            </p>
 
-                                <!-- forntend icon -->
-                                <!-- <svg class="fill-gray-300" width="24" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24">
-                                            <path
-                                                d="M21,16V4H3V16H21M21,2A2,2 0 0,1 23,4V16A2,2 0 0,1 21,18H14V20H16V22H8V20H10V18H3C1.89,18 1,17.1 1,16V4C1,2.89 1.89,2 3,2H21M5,6H14V11H5V6M15,6H19V8H15V6M19,9V14H15V9H19M5,12H9V14H5V12M10,12H14V14H10V12Z" />
-                                        </svg>
-
-                                        <span class="text-xl mx-4">Fontend</span>
-                                    </h4> -->
-
-                                <div class="flex flex-wrap">
-                                    <!-- ionic -->
-                                    <a href="https://ionicframework.com/"
-                                        class="fill-gray-300  hover:fill-[#3880FF]  hover:scale-105 p-2 my-auto ml-2"
-                                        target="_blank">
-                                        <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                            role="img">
-                                            <title>Ionic</title>
-                                            <path
-                                                d="M22.922 7.027l-.103-.23-.169.188c-.408.464-.928.82-1.505 1.036l-.159.061.066.155a9.745 9.745 0 0 1 .75 3.759c0 5.405-4.397 9.806-9.806 9.806-5.409 0-9.802-4.397-9.802-9.802 0-5.405 4.402-9.806 9.806-9.806 1.467 0 2.883.319 4.2.947l.155.075.066-.155a3.767 3.767 0 0 1 1.106-1.453l.197-.159-.225-.117A11.905 11.905 0 0 0 12.001.001c-6.619 0-12 5.381-12 12s5.381 12 12 12 12-5.381 12-12c0-1.73-.361-3.403-1.078-4.973zM12 6.53A5.476 5.476 0 0 0 6.53 12 5.476 5.476 0 0 0 12 17.47 5.476 5.476 0 0 0 17.47 12 5.479 5.479 0 0 0 12 6.53zm10.345-2.007a2.494 2.494 0 1 1-4.988 0 2.494 2.494 0 0 1 4.988 0z" />
-
-                                        </svg>
-                                    </a>
-
-                                    <!-- Angular -->
-                                    <a href="https://angular.dev/"
-                                        class="fill-gray-300 hover:fill-[#EC4899] hover:scale-105 p-2 my-auto ml-2"
-                                        target="_blank">
-                                        <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                            role="img">
-                                            <title>Angular</title>
-                                            <path
-                                                d="M16.712 17.711H7.288l-1.204 2.916L12 24l5.916-3.373-1.204-2.916ZM14.692 0l7.832 16.855.814-12.856L14.692 0ZM9.308 0 .662 3.999l.814 12.856L9.308 0Zm-.405 13.93h6.198L12 6.396 8.903 13.93Z" />
+                            <a href="assets/AZ-CV-EN-24.pdf" download
+                                class="flex items-center justify-center gap-2 mt-4 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors group">
+                                <svg class="w-5 h-5 fill-current text-gray-300 group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M14,2L20,8V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2H14M18,20V9H13V4H6V20H18M12,19L8,15H10.5V12H13.5V15H16L12,19Z" />
+                                </svg>
+                                <span class="text-gray-300 group-hover:text-white font-medium">Download Resume</span>
+                            </a>
 
 
-                                        </svg>
-                                    </a>
-
-                                    <!-- Angular Material-->
-                                    <a href="https://material.angular.io/"
-                                        class="fill-gray-300 hover:fill-blue-300 hover:scale-105 p-2 my-auto ml-2"
-                                        target="_blank">
-                                        <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                            role="img">
-                                            <title>Angular Material</title>
-                                            <path
-                                                d="M16.712 17.711H7.288l-1.204 2.916L12 24l5.916-3.373-1.204-2.916ZM14.692 0l7.832 16.855.814-12.856L14.692 0ZM9.308 0 .662 3.999l.814 12.856L9.308 0Zm-.405 13.93h6.198L12 6.396 8.903 13.93Z" />
-                                        </svg>
-                                    </a>
-
-                                    <!-- Bootstrap -->
-                                    <a href="https://getbootstrap.com/"
-                                        class="fill-gray-300 hover:fill-[#7952B3] hover:scale-105 p-2 my-auto ml-2"
-                                        target="_blank">
-                                        <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                            role="img">
-                                            <title>Bootstrap</title>
-                                            <path
-                                                d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z" />
-                                        </svg>
-                                    </a>
-
-                                    <!-- Tailwindcss -->
-                                    <a href="https://getbootstrap.com/"
-                                        class="fill-gray-300 hover:fill-[#7952B3] hover:scale-105 p-2 my-auto ml-2"
-                                        target="_blank">
-                                        <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                            role="img">
-                                            <title>Bootstrap</title>
-                                            <path
-                                                d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z" />
-                                        </svg>
-                                    </a>
-
-
-
-
-                                    <!-- </div>
-                                </span> -->
-                                </div>
-
-                                <!-- CTA -->
-                                <div class="pt-4">
-                                    <p class="text-gray-300 mb-4">
-                                        Have a project in mind or just want to chat tech?
-                                        I'm always open to new opportunities and conversations.
-                                    </p>
-                                    <div class="flex">
-                                        <span
-                                            class="flex text-xl items-center text-indigo-400 hover:text-indigo-300 transition-colors">
-                                            Let's connect !
-
-                                            <!-- right arrow -->
-                                            <svg class="m-4" width="24" xmlns="http://www.w3.org/2000/svg"
-                                                class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </span>
-                                        <span class="flex my-auto">
-                                            <!-- mail -->
-                                            <a href="mailto:ahmedzrafi01@gmail.com"
-                                                class="fill-gray-300  hover:fill-red-400  hover:scale-105 p-2 my-auto ml-2"
-                                                target="_blank">
-                                                <svg width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                                    role="img">
-                                                    <title>Gmail</title>
-                                                    <path
-                                                        d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
-                                                </svg>
-                                            </a>
-                                            <!-- likedin -->
-                                            <a href="https://www.linkedin.com/in/ahmed-zrafi"
-                                                class="fill-gray-300  hover:fill-blue-500  hover:scale-105 p-2 my-auto ml-2"
-                                                target="_blank">
-                                                <svg width="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                    <title>linkedin</title>
-                                                    <path
-                                                        d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
-                                                </svg>
-                                            </a>
-
-                                            <!-- Calendly -->
-                                            <a href="https://calendly.com/zrafiovic/30min-meeting"
-                                                class="fill-gray-300  hover:fill-blue-700  hover:scale-105 p-2 my-auto ml-2"
-                                                target="_blank">
-                                                <svg width="24" role="img" viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <title>Calendly</title>
-                                                    <path
-                                                        d="M19.655 14.262c.281 0 .557.023.828.064 0 .005-.005.01-.005.014-.105.267-.234.534-.381.786l-1.219 2.106c-1.112 1.936-3.177 3.127-5.411 3.127h-2.432c-2.23 0-4.294-1.191-5.412-3.127l-1.218-2.106a6.251 6.251 0 0 1 0-6.252l1.218-2.106C6.736 4.832 8.8 3.641 11.035 3.641h2.432c2.23 0 4.294 1.191 5.411 3.127l1.219 2.106c.147.252.271.519.381.786 0 .004.005.009.005.014-.267.041-.543.064-.828.064-1.816 0-2.501-.607-3.291-1.306-.764-.676-1.711-1.517-3.44-1.517h-1.029c-1.251 0-2.387.455-3.2 1.278-.796.805-1.233 1.904-1.233 3.099v1.411c0 1.196.437 2.295 1.233 3.099.813.823 1.949 1.278 3.2 1.278h1.034c1.729 0 2.676-.841 3.439-1.517.791-.703 1.471-1.306 3.287-1.301Zm.005-3.237c.399 0 .794-.036 1.179-.11-.002-.004-.002-.01-.002-.014-.073-.414-.193-.823-.349-1.218.731-.12 1.407-.396 1.986-.819 0-.004-.005-.013-.005-.018-.331-1.085-.832-2.101-1.489-3.03-.649-.915-1.435-1.719-2.331-2.395-1.867-1.398-4.088-2.138-6.428-2.138-1.448 0-2.855.28-4.175.841-1.273.543-2.423 1.315-3.407 2.299S2.878 6.552 2.341 7.83c-.557 1.324-.842 2.726-.842 4.175 0 1.448.281 2.855.842 4.174.542 1.274 1.314 2.423 2.298 3.407s2.129 1.761 3.407 2.299c1.324.556 2.727.841 4.175.841 2.34 0 4.561-.74 6.428-2.137a10.815 10.815 0 0 0 2.331-2.396c.652-.929 1.158-1.949 1.489-3.03 0-.004.005-.014.005-.018-.579-.423-1.255-.699-1.986-.819.161-.395.276-.804.349-1.218.005-.009.005-.014.005-.023.869.166 1.692.506 2.404 1.035.685.505.552 1.075.446 1.416C22.184 20.437 17.619 24 12.221 24c-6.625 0-12-5.375-12-12s5.37-12 12-12c5.398 0 9.963 3.563 11.471 8.464.106.341.239.915-.446 1.421-.717.529-1.535.873-2.404 1.034.128.716.128 1.45 0 2.166-.387-.074-.782-.11-1.182-.11-4.184 0-3.968 2.823-6.736 2.823h-1.029c-1.899 0-3.15-1.357-3.15-3.095v-1.411c0-1.738 1.251-3.094 3.15-3.094h1.034c2.768 0 2.552 2.823 6.731 2.827Z" />
-                                                </svg>
-                                            </a>
-
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="py-20" role="region" aria-labelledby="services-title">
-            <div class="container mx-auto px-6">
-                <h2 id="services-title" class="text-4xl font-bold mb-12">Services</h2>
-                <p class="text-gray-300 mb-12">
-                    Full Stack Developer specializing in building modern web and cross-platform applications.
-                </p>
-
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div class="text-center p-6 bg-gray-800 rounded-xl">
-                        <div class="text-4xl mb-4" role="img" aria-label="Frontend Development">🚀</div>
-                        <h3 class="text-xl font-bold mb-2">Frontend</h3>
-                        <p class="text-gray-300">React, Vue, TypeScript, Tailwind</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Projects Section -->
         <section id="projects" class="py-20 bg-gray-800/50" role="region" aria-labelledby="projects-title">
             <div class="container mx-auto px-6">
-                <h2 id="projects-title" class="text-4xl font-bold mb-12">Featured Projects</h2>
+                <h2 id="projects-title" class="text-center text-4xl font-bold mb-12">Featured Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Project Card -->
                     <article class="bg-gray-800 rounded-xl p-8 hover:transform hover:scale-[1.02] transition-all">
@@ -354,6 +329,81 @@ solutions seeker by occupation, and a lifelong learner by character.">
                 </div>
             </div>
         </section>
+
+        <!-- CTA Section -->
+        <section id="contact"
+            class="py-20 bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-900 relative overflow-hidden"
+            role="region" aria-labelledby="cta-title">
+            <!-- Decorative background elements -->
+            <div class="absolute inset-0 opacity-10">
+                <div
+                    class="absolute top-0 left-0 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl animate-blob">
+                </div>
+                <div
+                    class="absolute top-0 right-0 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000">
+                </div>
+                <div
+                    class="absolute bottom-0 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000">
+                </div>
+            </div>
+
+            <div class="container mx-auto px-6 relative">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 id="cta-title" class="text-4xl md:text-5xl font-bold mb-8">
+                        Ready to Build Something Amazing?
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                        Have a project in mind or just want to chat tech?
+                        I'm always open to new opportunities and interesting conversations.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <!-- Primary CTA Button -->
+                        <a href="mailto:ahmedzrafi01@gmail.com"
+                            class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-lg font-medium transition-all hover:scale-105">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            <span>Get in Touch</span>
+                        </a>
+
+                        <!-- Secondary CTA Button -->
+                        <a href="https://calendly.com/zrafiovic/30min-meeting"
+                            class="flex items-center gap-2 border border-indigo-400 hover:bg-indigo-600/20 px-8 py-4 rounded-lg font-medium transition-all hover:scale-105"
+                            target="_blank">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Schedule a Call</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex justify-center gap-6 mt-12">
+                        <a href="https://www.linkedin.com/in/ahmed-zrafi"
+                            class="text-gray-300 hover:text-white transition-colors" target="_blank">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/yourusername"
+                            class="text-gray-300 hover:text-white transition-colors" target="_blank">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
 
