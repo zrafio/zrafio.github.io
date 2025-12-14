@@ -4,38 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AZ Dev - Professional portfolio of [Ahmed ZRAFI] - Full Stack Developer specializing in building modern web and cross-platform applications. Curious, rigorous and autonomous, I'm a computer science engineer by title, an innovative & optimized
+    <meta name="description" content="AZ MEAN Dev - Professional portfolio of [Ahmed ZRAFI] - Full Stack Developer specializing in building modern web and cross-platform applications. Curious, rigorous and autonomous, I'm a computer science engineer by title, an innovative & optimized
 solutions seeker by occupation, and a lifelong learner by character.">
 
     <link rel="icon" type="image/svg+xml" href="assets/imgs/logo.svg">
-    <title>AZ Dev - Full Stack Developer</title>
+    <title>AZ MEAN Dev - Full Stack Developer</title>
 
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <style>
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-            /* Adjust based on your header height */
-        }
-
-        /* For better mobile experience */
-        @media (max-width: 768px) {
-            html {
-                scroll-padding-top: 60px;
-            }
-        }
-
-        #mobile-menu {
-            transition: all 0.3s ease-in-out;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-        }
-
-        #mobile-menu:not(.hidden) {
-            max-height: 300px;
-            opacity: 1;
         }
 
 
@@ -109,38 +88,19 @@ solutions seeker by occupation, and a lifelong learner by character.">
 
     <!-- Navigation -->
     <nav class="fixed w-full bg-gray-800/90 backdrop-blur-sm z-50" role="navigation" aria-label="Main navigation">
-        <div class="container mx-auto px-8 md:px-4 lg:px-24 py-4">
+        <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <a href="#" class="flex items-center text-2xl font-bold" aria-label="Home">
-                    <img src="assets/imgs/logo.svg" alt="AZ Dev Logo" width="40" height="40">
-                    <span class="text-2xl font-bold gradient-text ml-4">AZ Dev</span>
+                <a href="#" class="flex text-2xl font-bold" aria-label="Home">
+                    <img src="assets/imgs/logo.svg" alt="Logo">
+                    <span class="text-2xl font-bold gradient-text mx-4 my-auto" aria-label="Home">AZ MEAN Dev</a>
                 </a>
 
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8" role="menubar">
                     <a href="#services" class="hover:text-indigo-400 transition-colors" role="menuitem">Services</a>
                     <a href="#about" class="hover:text-indigo-400 transition-colors" role="menuitem">About</a>
+                    <a href="#projects" class="hover:text-indigo-400 transition-colors" role="menuitem">Projects</a>
                     <a href="#contact" class="hover:text-indigo-400 transition-colors" role="menuitem">Contact</a>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="menu-toggle"
-                    class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg"
-                    aria-label="Toggle menu" aria-expanded="false">
-                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path id="menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu (Hidden by default) -->
-            <div id="mobile-menu" class="md:hidden mt-4 hidden bg-gray-800 rounded-lg p-4 space-y-4">
-                <a href="#services" class="block hover:text-indigo-400 transition-colors py-2"
-                    role="menuitem">Services</a>
-                <a href="#about" class="block hover:text-indigo-400 transition-colors py-2" role="menuitem">About</a>
-                <a href="#contact" class="block hover:text-indigo-400 transition-colors py-2"
-                    role="menuitem">Contact</a>
             </div>
         </div>
     </nav>
@@ -148,7 +108,7 @@ solutions seeker by occupation, and a lifelong learner by character.">
     <main>
         <!-- Hero Section -->
         <section class="min-h-screen flex items-center pt-20" role="banner">
-            <div class="container flex items-center mx-auto px-8 md:px-4 lg:px-24 fade-in">
+            <div class="container flex items-center mx-auto px-6 fade-in">
                 <div class="z-10 max-w-3xl mr-auto">
                     <h1 class="text-5xl md:text-7xl font-bold mb-6">
                         Building digital experiences with
@@ -156,13 +116,18 @@ solutions seeker by occupation, and a lifelong learner by character.">
                     </h1>
                     <p class="text-xl text-gray-300 mb-8">
                         Full-stack developer specializing in modern web applications
-                        <br> and user-centric solutions.
+                        and user-centric solutions.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#contact"
                             class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-lg font-medium transition-colors"
                             role="button">
                             Get in touch
+                        </a>
+                        <a href="#projects"
+                            class="border border-indigo-600 hover:bg-indigo-600/20 px-8 py-4 rounded-lg font-medium transition-colors"
+                            role="button">
+                            View work
                         </a>
                     </div>
                 </div>
@@ -172,24 +137,42 @@ solutions seeker by occupation, and a lifelong learner by character.">
 
         <!-- Services Section -->
         <section id="services" class="py-20 bg-gray-800/50" role="region" aria-labelledby="services-title">
-            <div class="container mx-auto px-8 md:px-4 lg:px-24">
+            <div class="container mx-auto px-6">
                 <h2 id="services-title" class="text-center text-4xl font-bold mb-12">Services</h2>
                 <p class="text-center text-gray-300 mb-16 max-w-2xl mx-auto">
-                    Full-spectrum development, smart, innovative, optimized, and cost-effective solutions.
+                    Full-spectrum development, smart, innovative, optimized, and cost-effective solutions
                 </p>
 
+                <!-- Frontend Development -->
+                <div class="mb-20">
+                    <h3 class="text-2xl font-bold mb-8 border-l-4 border-blue-500 pl-4">Frontend Development</h3>
+                    <p class="text-gray-300 max-w-3xl mx-auto mb-12">Transforming your ideas and design mockups into
+                        captivating
+                        user experiences across all devices and screen sizes</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Cards remain unchanged -->
+                    </div>
+                </div>
 
-
+                <!-- Backend Development -->
+                <div class="mb-20">
+                    <h3 class="text-2xl font-bold mb-8 border-l-4 border-green-500 pl-4">Backend Development</h3>
+                    <p class="text-gray-300 max-w-3xl mx-auto mb-12">Building robust, scalable foundations for your
+                        digital
+                        solutions with cutting-edge server-side technologies</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Cards remain unchanged -->
+                    </div>
+                </div>
 
                 <!-- Business Solutions -->
                 <div class="mb-20">
-                    <h3 class="text-2xl font-bold mb-8 border-l-4 border-purple-500 pl-4">Business Ready
+                    <h3 class="text-2xl font-bold mb-8 border-l-4 border-purple-500 pl-4">Essential Business Ready
                         Solutions
                     </h3>
-                    <p class="text-gray-300 max-w-3xl mb-12">Pre-packaged business automation systems ready for
+                    <p class="text-gray-300 max-w-3xl mx-auto mb-12">Pre-packaged business automation systems ready for
                         immediate deployment and customization</p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div class="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
                             <div class="text-purple-400 text-2xl mb-3">🤖</div>
                             <h4 class="font-bold mb-2">ERP Suite</h4>
@@ -211,68 +194,14 @@ solutions seeker by occupation, and a lifelong learner by character.">
                     </div>
                 </div>
 
-                <!-- Custom Apps Development -->
+                <!-- On-Demand Training & Support -->
                 <div class="mb-20">
-                    <h3 class="text-2xl font-bold mb-8 border-l-4 border-blue-500 pl-4">Custom Apps
-                        Development
+                    <h3 class="text-2xl font-bold mb-8 border-l-4 border-pink-500 pl-4">On-Demand Training & Support
                     </h3>
-                    <p class="text-gray-300 max-w-3xl mb-12">
-                        Transforming ideas into high-performance applications with captivating user experiences
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Pixel-Perfect UIs + SEO -->
-                        <div class="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors group">
-                            <div class="text-blue-400 text-2xl mb-3">🎯</div>
-                            <h4 class="font-bold mb-2">Pixel-Perfect & SEO</h4>
-                            <p class="text-gray-300 text-sm">Design implementation with search engine optimization</p>
-                        </div>
-
-                        <!-- Universal Reach + Cost Control -->
-                        <div class="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors group">
-                            <div class="text-blue-400 text-2xl mb-3">💸</div>
-                            <h4 class="font-bold mb-2">Cost-Effective Reach</h4>
-                            <p class="text-gray-300 text-sm">Cross-platform with single codebase efficiency</p>
-                        </div>
-
-                        <!-- Quality Code -->
-                        <div class="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors group">
-                            <div class="text-green-400 text-2xl mb-3">✨</div>
-                            <h4 class="font-bold mb-2">Quality Code</h4>
-                            <p class="text-gray-300 text-sm">Clean, reusable, and maintainable</p>
-                        </div>
-
-                        <!-- Plugin Architecture + Scalable -->
-                        <div class="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors group">
-                            <div class="text-green-400 text-2xl mb-3">📈</div>
-                            <h4 class="font-bold mb-2">Scalable Design</h4>
-                            <p class="text-gray-300 text-sm">Modular architecture for growth</p>
-                        </div>
-
-                        <!-- RESTful APIs + Real-Time -->
-                        <div class="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors group">
-                            <div class="text-green-400 text-2xl mb-3">⚡</div>
-                            <h4 class="font-bold mb-2">API & Real-Time</h4>
-                            <p class="text-gray-300 text-sm">Secure APIs with live features</p>
-                        </div>
-
-                        <!-- Ongoing Support -->
-                        <div class="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors group">
-                            <div class="text-blue-400 text-2xl mb-3">🔧</div>
-                            <h4 class="font-bold mb-2">Ongoing Support</h4>
-                            <p class="text-gray-300 text-sm">Maintenance and improvements</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Training & Support -->
-                <div class="mb-20">
-                    <h3 class="text-2xl font-bold mb-8 border-l-4 border-pink-500 pl-4">Training & Support
-                    </h3>
-                    <p class="text-gray-300 max-w-3xl mb-12">On-Demand flexible support and knowledge transfer
-                        programs
+                    <p class="text-gray-300 max-w-3xl mx-auto mb-12">Flexible support and knowledge transfer programs
                         tailored
                         to your team's needs</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div class="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
                             <div class="text-pink-400 text-2xl mb-3">💼</div>
                             <h4 class="font-bold mb-2">IT Consulting</h4>
@@ -280,26 +209,23 @@ solutions seeker by occupation, and a lifelong learner by character.">
                                 optimization</p>
                         </div>
                         <div class="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
-                            <div class="text-pink-400 text-2xl mb-3">🚀</div>
+                            <div class="text-pink-400 text-2xl mb-3">📚</div>
                             <h4 class="font-bold mb-2">IT Training</h4>
                             <p class="text-gray-300 text-sm">Frontend, Backend, Database, and DevOps workshops</p>
                         </div>
-                        <div class="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors group">
-                            <div class="text-pink-400 text-2xl mb-3">🎓</div>
-                            <h4 class="font-bold mb-2">Next-Gen Devs</h4>
-                            <p class="text-gray-300 text-sm">
-                                STEM and programming mentorship
-                            </p>
+                        <div class="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                            <div class="text-pink-400 text-2xl mb-3">📝</div>
+                            <h4 class="font-bold mb-2">Academic Support</h4>
+                            <p class="text-gray-300 text-sm">IT student guidance + High school STEM subjects</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about" class="py-20" role="region" aria-labelledby="about-title">
-            <div class="container mx-auto px-8 md:px-4 lg:px-24">
+            <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto">
                     <h2 id="about-title" class="text-center text-4xl font-bold mb-12">About Me</h2>
 
@@ -349,7 +275,7 @@ solutions seeker by occupation, and a lifelong learner by character.">
                                 </div>
                                 <div class="space-y-2">
                                     <div class="text-indigo-400 text-xl">Projects Completed</div>
-                                    <div class="font-bold text-2xl">70+</div>
+                                    <div class="font-bold text-2xl">10+</div>
                                 </div>
                             </div>
 
@@ -358,10 +284,48 @@ solutions seeker by occupation, and a lifelong learner by character.">
                                 applications.
                             </p>
 
+                            <a href="assets/AZ-CV-EN-24.pdf" download
+                                class="flex items-center justify-center gap-2 mt-4 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors group">
+                                <svg class="w-5 h-5 fill-current text-gray-300 group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M14,2L20,8V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2H14M18,20V9H13V4H6V20H18M12,19L8,15H10.5V12H13.5V15H16L12,19Z" />
+                                </svg>
+                                <span class="text-gray-300 group-hover:text-white font-medium">Download Resume</span>
+                            </a>
+
 
                         </div>
                     </div>
                 </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-800/50" role="region" aria-labelledby="projects-title">
+            <div class="container mx-auto px-6">
+                <h2 id="projects-title" class="text-center text-4xl font-bold mb-12">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project Card -->
+                    <article class="bg-gray-800 rounded-xl p-8 hover:transform hover:scale-[1.02] transition-all">
+                        <div class="mb-4">
+                            <span class="text-indigo-400 text-sm">Full Stack</span>
+                            <h3 class="text-2xl font-bold mt-2">E-commerce Platform</h3>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            Scalable e-commerce solution with React, Node.js, and microservices architecture.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-900 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-gray-900 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-gray-900 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300" rel="noopener">Live Demo</a>
+                            <a href="#" class="text-gray-300 hover:text-gray-300" rel="noopener">Case Study →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <!-- CTA Section -->
@@ -381,7 +345,7 @@ solutions seeker by occupation, and a lifelong learner by character.">
                 </div>
             </div>
 
-            <div class="container mx-auto px-8 md:px-4 lg:px-24 relative">
+            <div class="container mx-auto px-6 relative">
                 <div class="max-w-4xl mx-auto text-center">
                     <h2 id="cta-title" class="text-4xl md:text-5xl font-bold mb-8">
                         Ready to Build Something Amazing?
@@ -403,7 +367,7 @@ solutions seeker by occupation, and a lifelong learner by character.">
                         </a>
 
                         <!-- Secondary CTA Button -->
-                        <a href="https://calendly.com/zrafiovic/meeting"
+                        <a href="https://calendly.com/zrafiovic/30min-meeting"
                             class="flex items-center gap-2 border border-indigo-400 hover:bg-indigo-600/20 px-8 py-4 rounded-lg font-medium transition-all hover:scale-105"
                             target="_blank">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -442,105 +406,10 @@ solutions seeker by occupation, and a lifelong learner by character.">
     </main>
 
     <footer class="border-t border-gray-800" role="contentinfo">
-        <div class="container mx-auto px-8 md:px-4 lg:px-24 py-8 text-center text-gray-300">
-            AZ Dev © 2025. Built with passion and Tailwind CSS.
+        <div class="container mx-auto px-6 py-8 text-center text-gray-300">
+            AZ MEAN Dev © 2025. Built with passion and Tailwind CSS.
         </div>
     </footer>
-
-    <!-- <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (menuToggle) {
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script> -->
-
-    <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-            const menuPath = document.getElementById('menu-path');
-
-            if (menuToggle && mobileMenu) {
-                menuToggle.addEventListener('click', function () {
-                    // Toggle mobile menu visibility
-                    mobileMenu.classList.toggle('hidden');
-
-                    // Update aria-expanded attribute for accessibility
-                    const isExpanded = mobileMenu.classList.contains('hidden') ? 'false' : 'true';
-                    menuToggle.setAttribute('aria-expanded', isExpanded);
-
-                    // Change icon to X when menu is open
-                    if (mobileMenu.classList.contains('hidden')) {
-                        menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Hamburger icon
-                    } else {
-                        menuPath.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // X icon
-                    }
-                });
-
-                // Close mobile menu when clicking on links
-                const mobileLinks = mobileMenu.querySelectorAll('a');
-                mobileLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                        menuToggle.setAttribute('aria-expanded', 'false');
-                        menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-                    });
-                });
-
-                // Close mobile menu when clicking outside
-                document.addEventListener('click', function (event) {
-                    const isClickInside = menuToggle.contains(event.target) || mobileMenu.contains(event.target);
-
-                    if (!isClickInside && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                        menuToggle.setAttribute('aria-expanded', 'false');
-                        menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-                    }
-                });
-            }
-
-            // Smooth scroll for all anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        // Close mobile menu if open
-                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                            mobileMenu.classList.add('hidden');
-                            menuToggle.setAttribute('aria-expanded', 'false');
-                            menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-                        }
-
-                        // Smooth scroll to target
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80, // Adjust for fixed header
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-
 </body>
 
 </html>
