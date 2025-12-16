@@ -10,99 +10,7 @@ solutions seeker by occupation, and a lifelong learner by character.">
     <link rel="icon" type="image/svg+xml" href="assets/imgs/logo.svg">
     <title>AZ Dev - Full Stack Developer</title>
 
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-            /* Adjust based on your header height */
-        }
-
-        /* For better mobile experience */
-        @media (max-width: 768px) {
-            html {
-                scroll-padding-top: 60px;
-            }
-        }
-
-        #mobile-menu {
-            transition: all 0.3s ease-in-out;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-        }
-
-        #mobile-menu:not(.hidden) {
-            max-height: 300px;
-            opacity: 1;
-        }
-
-
-        @layer utilities {
-            .scrollbar-custom {
-                scrollbar-width: thin;
-                scrollbar-color: #4F46E5 #1F2937;
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
-        }
-
-        .gradient-text {
-            background: linear-gradient(45deg, #4F46E5, #EC4899);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .gradient-fill {
-            fill: linear-gradient(45deg, #4F46E5, #EC4899);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes blob {
-            0% {
-                transform: translate(0px, 0px) scale(1);
-            }
-
-            33% {
-                transform: translate(30px, -50px) scale(1.1);
-            }
-
-            66% {
-                transform: translate(-20px, 20px) scale(0.9);
-            }
-
-            100% {
-                transform: translate(0px, 0px) scale(1);
-            }
-        }
-
-        .animate-blob {
-            animation: blob 7s infinite;
-        }
-
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-
-        .animation-delay-4000 {
-            animation-delay: 4s;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/output.css">
 </head>
 
 <body class="bg-gray-900 text-gray-100 font-sans scrollbar-custom">
@@ -111,9 +19,9 @@ solutions seeker by occupation, and a lifelong learner by character.">
     <nav class="fixed w-full bg-gray-800/90 backdrop-blur-sm z-50" role="navigation" aria-label="Main navigation">
         <div class="container mx-auto px-8 md:px-4 lg:px-24 py-4">
             <div class="flex items-center justify-between">
-                <a href="#" class="flex items-center text-2xl font-bold" aria-label="Home">
-                    <img src="assets/imgs/logo.svg" alt="AZ Dev Logo" width="40" height="40">
-                    <span class="text-2xl font-bold gradient-text ml-4">AZ Dev</span>
+                <a href="#hero" class="flex items-center text-2xl font-bold" aria-label="Home">
+                    <!-- <img class="mr-4" src="assets/imgs/logo.svg" alt="AZ Dev Logo" width="40" height="40"> -->
+                    <span class="text-2xl font-bold gradient-text">AZ Dev</span>
                 </a>
 
                 <!-- Desktop Navigation -->
@@ -147,7 +55,7 @@ solutions seeker by occupation, and a lifelong learner by character.">
 
     <main>
         <!-- Hero Section -->
-        <section class="min-h-screen flex items-center pt-20" role="banner">
+        <section id="hero" class="min-h-screen flex items-center pt-20" role="banner">
             <div class="container flex items-center mx-auto px-8 md:px-4 lg:px-24 fade-in">
                 <div class="z-10 max-w-3xl mr-auto">
                     <h1 class="text-5xl md:text-7xl font-bold mb-6">

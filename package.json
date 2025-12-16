@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  },
+  "name": "az-dev",
+  "version": "0.0.1",
+  "description": "AZ Dev - Professional portfolio of [Ahmed ZRAFI] - Full Stack Developer",
+  "devDependencies": {},
+  "scripts": {
+    "start": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zrafio/zrafio.github.io.git"
+  },
+  "author": "ahmedzrafi01@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zrafio/zrafio.github.io/issues"
+  },
+  "homepage": "https://github.com/zrafio/zrafio.github.io#readme"
+}
